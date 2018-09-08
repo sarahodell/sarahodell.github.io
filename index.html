@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+
+ <p>
+  <img src="{{ 'http://sarahodell.github.io/img/cornyem.jpg' | asset_path }}" height="200px" align="right" HSPACE = "50"/>
+My name is Sarah Odell. I'm a PhD student in the Plant Biology Graduate Group at the University of California, Davis. I am a member of the <a href="http://www.rilab.org/" target="_blank">Ross-Ibarra</a> and <a href="http://runcielab.ucdavis.edu" target="_blank">Runcie</a> labs. I am interested in using statistical and quantitative genetics to understand the control of complex traits, focusing on maize and it's wild relatives.
+</p>
+
+<p>
+You can find me on
+<a href="http://www.twitter.com/sg_odell">Twitter</a> and
+<a href="http://github.com/sarahodell">Github</a>, 
+or email me at sgodell at ucdavis.edu. 
+</p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
